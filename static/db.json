@@ -1,0 +1,65 @@
+{
+  "chz": {
+    "Деньги": {
+      "name": "Деньги",
+      "description": "Наличка ето всегда заебись",
+      "isBooked": false,
+      "secret": null,
+      "image": "/content/money.jpg",
+      "isUnlimited": true
+    },
+    "Вкусный алкоголь": {
+      "name": "Вкусный алкоголь",
+      "description": "Бонус поинты за джин/ром/егерь.",
+      "isBooked": false,
+      "secret": null,
+      "image": "/content/drinks.png",
+      "isUnlimited": true
+    },
+    "Armored Core VI": {
+      "name": "Armored Core VI",
+      "description": "Мой стим - <a class=\"embedded-link\" href=\"https://steamcommunity.com/profiles/76561198064134080/\">тыц</a>",
+      "isBooked": true,
+      "secret": "stefa",
+      "link": "https://store.steampowered.com/app/1888160/ARMORED_CORE_VI_FIRES_OF_RUBICON/",
+      "image": "/content/armoredcore.png",
+      "isUnlimited": false
+    },
+    "Ultimate Guard Boulder Deck Case 100+": {
+      "name": "Ultimate Guard Boulder Deck Case 100+",
+      "description": "Топовый декбокс для топовых колод",
+      "isBooked": false,
+      "secret": "пипи",
+      "link": "https://dragonshop.com.ua/korobka-dlya-kart-ultimate-guard-boulder-100-poppy-topaz/",
+      "image": "/content/boulder.png",
+      "isUnlimited": true
+    },
+    "DeepCool LT520 White": {
+      "name": "DeepCool LT520 White",
+      "description": "Жидкосная системка что б гудело еще меньше",
+      "isBooked": false,
+      "secret": null,
+      "link": "https://hard.rozetka.com.ua/deepcool-lt520-wh/p384788388/",
+      "image": "/content/cooler.png",
+      "isUnlimited": false
+    },
+    "Стойка пантограф": {
+      "name": "Стойка пантограф",
+      "description": "Моя уже почти сломалась",
+      "isBooked": false,
+      "secret": null,
+      "link": "https://rozetka.com.ua/fifine-bm63/p354911850/",
+      "image": "/content/holder.png",
+      "isUnlimited": false
+    },
+    "Подставка для ноута": {
+      "name": "Подставка для ноута",
+      "description": "Выбирайте любую, главное что б пропускала воздух",
+      "isBooked": true,
+      "secret": "14072001",
+      "image": "/content/stand.png",
+      "isUnlimited": false
+    }
+  },
+  "nedovolnaya": {}
+}
