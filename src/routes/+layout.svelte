@@ -1,13 +1,13 @@
 <script lang="ts">
     import { currentUser } from "$lib/stores";
-    import { Users } from "$lib/types";
+    import { User } from "$lib/types";
     import "../app.css";
 
+    const users = Object.values(User);
     let selectedUser = $currentUser;
-    let users = Object.values(Users);
 
-    function changeUser(){
-        currentUser.update(x => selectedUser);
+    function changeUser() {
+        currentUser.update((_) => selectedUser);
     }
 </script>
 
@@ -16,9 +16,13 @@
 >
     <h1 class="text-2xl font-semibold mb-6 font-mono header">
         <a href="/">./wishlist/</a>
-        <select class="text-gray-500" bind:value={selectedUser} on:change={changeUser}>
+        <select
+            class="text-gray-500"
+            bind:value={selectedUser}
+            on:change={changeUser}
+        >
             {#each users as user}
-                <option value="{user}">{user}</option>
+                <option value={user}>{user}</option>
             {/each}
         </select>
     </h1>

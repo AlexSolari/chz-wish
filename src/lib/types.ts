@@ -7,7 +7,7 @@ export interface ICardData {
     isUnlimited: boolean,
 }
 
-export enum Users {
+export enum User {
     chz = "chz",
     nedovolnaya = "nedovolnaya"
 }
@@ -38,6 +38,16 @@ export class CardData implements ICardData{
         this.isBooked = data.isBooked;
         this.isUnlimited = data.isUnlimited;
     }
+}
+
+export interface IBookingStatusChangeRequestData {
+    secret: string,
+    name: string
+}
+
+export interface IPostRequestData<TType> {
+    user: User,
+    data: TType
 }
 
 export interface Database {
