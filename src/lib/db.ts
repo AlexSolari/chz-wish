@@ -6,8 +6,8 @@ import type { Low } from 'lowdb';
 type UserDataCollection = Record<string, IWishlistItem>;
 type DataCollection = Record<string, UserDataCollection>;
 
-function connect() : Promise<Low<DataCollection>> {
-    return JSONFilePreset(`db.json`, {});
+function connect(): Promise<Low<DataCollection>> {
+    return JSONFilePreset(import.meta.env.MODE == "development" ? "static/db.json" : `db.json`, {});
 }
 
 async function all(user: string): Promise<IWishlistItem[]> {

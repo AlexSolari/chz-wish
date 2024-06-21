@@ -1,13 +1,22 @@
 <script lang="ts">
     import { currentUser } from "$lib/stores";
     import { User } from "$lib/types";
+    import { onMount } from "svelte";
     import "../app.css";
 
     const users = Object.values(User);
     let selectedUser = $currentUser;
 
+    onMount(() => {
+        currentUser.subscribe((value) => {
+            if (value) {
+                localStorage.content = value;
+            }
+        });
+    });
+
     function changeUser() {
-        currentUser.update((_) => selectedUser);
+        currentUser.set(selectedUser);
     }
 </script>
 

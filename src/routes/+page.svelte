@@ -1,37 +1,27 @@
 <script lang="ts">
-    import { get } from "$lib";
+    import { invalidateAll } from "$app/navigation";
     import Card from "$lib/components/Card.svelte";
-    import { currentUser } from "$lib/stores";
-    import type { ICardData } from "$lib/types";
+    import { currentUser } from "$lib/stores.js";
     import { onMount } from "svelte";
+    export let data;
 
-    let data = new Promise<ICardData[]>((_) => {});
-
-    onMount(() =>
-        currentUser.subscribe(async (_) => {
-            const response = await get("/items");
-            data = await response.json();
-        }),
-    );
+    onMount(() => {
+        currentUser.subscribe((value) => {
+            document.cookie = `target=${value}`;
+            invalidateAll();
+        });
+    });
 </script>
 
-{#await data}
-    <div
-        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full max-w-6xl"
-    >
-        <p class="text-gray-500 col-span-3 text-center">загрузка...</p>
-    </div>
-{:then content}
-    <div
-        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full max-w-6xl"
-    >
-        {#each content as cardItem}
-            <Card item={cardItem} />
-        {:else}
-            <p class="text-gray-500 col-span-3 text-center">Пока что ничего!</p>
-        {/each}
-    </div>
-{/await}
+<div
+    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full max-w-6xl"
+>
+    {#each data.viewModels as cardItem}
+        <Card item={cardItem} />
+    {:else}
+        <p class="text-gray-500 col-span-3 text-center">Пока что ничего!</p>
+    {/each}
+</div>
 
 <style lang="postcss">
 </style>
