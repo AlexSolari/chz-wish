@@ -1,16 +1,15 @@
 
 import { JSONFilePreset } from 'lowdb/node'
 import type { Database, IWishlistItem } from './types';
-import type { Low } from 'lowdb';
 
 type UserDataCollection = Record<string, IWishlistItem>;
 type DataCollection = Record<string, UserDataCollection>;
 
-function connect(): Promise<Low<DataCollection>> {
-    return JSONFilePreset(import.meta.env.MODE == "development" ? "static/db.json" : `db.json`, {});
+function connect(){
+    return JSONFilePreset(import.meta.env.MODE == "development" ? "static/db.json" : `db.json`, {} as DataCollection);
 }
 
-async function all(user: string): Promise<IWishlistItem[]> {
+async function all(user: string) {
     const db = await connect();
 
     await db.read();
@@ -18,7 +17,7 @@ async function all(user: string): Promise<IWishlistItem[]> {
     return Object.values(db.data[user] || []);
 }
 
-async function setBooked(user: string, itemName: string, secret: string): Promise<IWishlistItem> {
+async function setBooked(user: string, itemName: string, secret: string){
     const db = await connect();
 
     await db.update((data) => {
@@ -29,7 +28,7 @@ async function setBooked(user: string, itemName: string, secret: string): Promis
     return db.data[user][itemName];
 }
 
-async function setUnbooked(user: string, itemName: string, secret: string): Promise<IWishlistItem> {
+async function setUnbooked(user: string, itemName: string, secret: string) {
     const db = await connect();
 
     if (db.data[user][itemName].secret == secret) {

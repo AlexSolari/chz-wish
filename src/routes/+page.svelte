@@ -1,26 +1,28 @@
 <script lang="ts">
-    import { invalidateAll } from "$app/navigation";
-    import Card from "$lib/components/Card.svelte";
-    import { currentUser } from "$lib/stores.js";
-    import { onMount } from "svelte";
-    export let data;
+	import { invalidateAll } from "$app/navigation";
+	import Card from "$lib/components/Card.svelte";
+	import { currentUser } from "$lib/stores.svelte.js";
+	import type { ICardData } from "$lib/types";
+	interface Props {
+		data: { viewModels: ICardData[] };
+	}
 
-    onMount(() => {
-        currentUser.subscribe((value) => {
-            document.cookie = `target=${value}`;
-            invalidateAll();
-        });
-    });
+	let { data }: Props = $props();
+
+	$effect(() => {
+		document.cookie = `target=${currentUser.name}`;
+		invalidateAll();
+	});
 </script>
 
 <div
-    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full max-w-6xl"
+	class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full max-w-6xl"
 >
-    {#each data.viewModels as cardItem}
-        <Card item={cardItem} />
-    {:else}
-        <p class="text-gray-500 col-span-3 text-center">Пока что ничего!</p>
-    {/each}
+	{#each data.viewModels as cardItem}
+		<Card item={cardItem} />
+	{:else}
+		<p class="text-gray-500 col-span-3 text-center">Пока что ничего!</p>
+	{/each}
 </div>
 
 <style lang="postcss">

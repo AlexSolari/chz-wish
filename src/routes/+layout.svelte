@@ -1,22 +1,22 @@
 <script lang="ts">
-    import { currentUser } from "$lib/stores";
+    import { currentUser } from "$lib/stores.svelte";
     import { User } from "$lib/types";
-    import { onMount } from "svelte";
+	import type { Snippet } from "svelte";
     import "../app.css";
+    interface Props {
+        children?: Snippet;
+    }
+
+    let { children }: Props = $props();
 
     const users = Object.values(User);
-    let selectedUser = $currentUser;
 
-    onMount(() => {
-        currentUser.subscribe((value) => {
-            if (value) {
-                localStorage.content = value;
-            }
-        });
+    $effect(() => {
+        localStorage.content = currentUser.name;
     });
 
-    function changeUser() {
-        currentUser.set(selectedUser);
+    function changeUser(event: Event) {
+        currentUser.name = (event.target as any).value;
     }
 </script>
 
@@ -27,8 +27,7 @@
         <a href="/">./wishlist/</a>
         <select
             class="text-gray-500"
-            bind:value={selectedUser}
-            on:change={changeUser}
+            onchange={changeUser}
         >
             {#each users as user}
                 <option value={user}>{user}</option>
@@ -36,5 +35,5 @@
         </select>
     </h1>
 
-    <slot />
+    {@render children?.()}
 </main>

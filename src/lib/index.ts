@@ -1,14 +1,12 @@
-import { get as getFromStore } from 'svelte/store';
-import { currentUser as userStore } from "$lib/stores";
+import { currentUser } from "$lib/stores.svelte";
 
-/* eslint-disable  @typescript-eslint/no-explicit-any */
-export function post(url: string, data: any = {}): Promise<Response> {
-    const currentUser = getFromStore(userStore);
+export function post<TType>(url: string, data: TType): Promise<Response> {
+    const userName = currentUser.name;
 
     return fetch(url, {
         method: "POST",
         body: JSON.stringify({
-            user: currentUser,
+            user: userName,
             data: data,
         }),
         headers: {
