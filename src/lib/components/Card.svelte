@@ -11,7 +11,7 @@
 
     async function handleBooking() {
         const secret = prompt(
-            'Придумайте пароль (он нужен будет для отмены бронирования):'
+            'Придумайте пароль (він потрібен буде для відміни бронювання):'
         );
 
         if (secret) {
@@ -22,7 +22,7 @@
     }
 
     async function handleUnbooking() {
-        const secret = prompt('Введите пароль:');
+        const secret = prompt('Введіть пароль:');
 
         if (secret) {
             const response = await post('/unbook', { name: item.name, secret });
@@ -30,8 +30,8 @@
             item = await response.json();
         }
     }
-    let bookedText = $derived(item.isBooked ? 'Забронировано' : 'Доступно');
-    let buttonText = $derived(item.isBooked ? 'Убрать бронь' : 'Забронировать');
+    let bookedText = $derived(item.isBooked ? 'Заброньовано' : 'Доступно');
+    let buttonText = $derived(item.isBooked ? 'Прибрати бронь' : 'Забронювати');
     let bookedClass = $derived(
         item.isBooked ? 'text-red-600' : 'text-green-600'
     );
@@ -65,7 +65,7 @@
         <div class="pl-4 flex-grow">
             <p class="text-sm text-gray-600 underline">
                 <a target="_blank" rel="noopener noreferrer" href={item.link}
-                    >Купить можно тут</a
+                    >Купити тут</a
                 >
             </p>
         </div>
@@ -73,7 +73,7 @@
     <div class="m-2 flex items-center">
         {#if item.isUnlimited}
             <span class="ml-2 mb-1 text-sm text-gray-500"
-                >Это можете дарить в любом количестве</span
+                >Це можна дарувати в любому обсязі</span
             >
         {:else}
             <div class="flex flex-1 self-end relative bottom-2">

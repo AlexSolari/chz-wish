@@ -21,7 +21,7 @@
     {#each data.viewModels as cardItem}
         <Card item={cardItem} />
     {:else}
-        <p class="text-gray-500 col-span-3 text-center">Пока что ничего!</p>
+        <p class="text-gray-500 col-span-3 text-center">Поки нічого!</p>
     {/each}
 </div>
 

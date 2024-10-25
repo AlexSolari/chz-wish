@@ -1,16 +1,16 @@
 {
   "chz": {
-    "Деньги": {
-      "name": "Деньги",
-      "description": "Наличка ето всегда заебись",
+    "Cash": {
+      "name": "Cash",
+      "description": "Гроші = кайф",
       "isBooked": false,
       "secret": null,
       "image": "/content/money.jpg",
       "isUnlimited": true
     },
-    "Вкусный алкоголь": {
-      "name": "Вкусный алкоголь",
-      "description": "Бонус поинты за джин/ром/егерь.",
+    "Смачний алкоголь": {
+      "name": "Смачний алкоголь",
+      "description": "Бажано джин/ром/егерь.",
       "isBooked": false,
       "secret": null,
       "image": "/content/drinks.png",
@@ -18,15 +18,31 @@
     },
     "Ultimate Guard Boulder Deck Case 100+": {
       "name": "Ultimate Guard Boulder Deck Case 100+",
-      "description": "Топовый декбокс для топовых колод",
+      "description": "Декбокс для 60-карткових форматів",
       "isBooked": false,
       "link": "https://dragonshop.com.ua/korobka-dlya-kart-ultimate-guard-boulder-100-poppy-topaz/",
       "image": "/content/boulder.png",
       "isUnlimited": true
     },
+    "Gamegenic Sidekick 100+ XL": {
+      "name": "Gamegenic Sidekick 100+ XL",
+      "description": "Декбокс для едх",
+      "isBooked": false,
+      "link": "https://dragonshop.com.ua/ru/catalog/search/?q=Sidekick+100%2B+XL+Green",
+      "image": "/content/sidekick.png",
+      "isUnlimited": true
+    },
+    "Dragon Shield Matte Dual Sleeves Fury": {
+      "name": "Dragon Shield Matte Dual Sleeves Fury",
+      "description": "ВАЖЛИВО: саме червоні Fury",
+      "isBooked": false,
+      "link": "https://dragonshop.com.ua/ru/copy_protektory-dlia-kart-dragon-shield-matte-dual-sleeves-fury-100-sht/",
+      "image": "/content/shields.png",
+      "isUnlimited": true
+    },
     "DeepCool LT520 White": {
       "name": "DeepCool LT520 White",
-      "description": "Жидкосная системка что б гудело еще меньше",
+      "description": "мммм хот вортер",
       "isBooked": false,
       "secret": null,
       "link": "https://hard.rozetka.com.ua/deepcool-lt520-wh/p384788388/",
