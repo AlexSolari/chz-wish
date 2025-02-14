@@ -20,7 +20,7 @@
             "name": "Ultimate Guard Boulder Deck Case 100+",
             "description": "Декбокс для 60-карткових форматів",
             "isBooked": false,
-            "link": "https://dragonshop.com.ua/korobka-dlya-kart-ultimate-guard-boulder-100-poppy-topaz/",
+            "link": "https://dragonshop.com.ua/catalog/search/?q=Ultimate+Guard+Boulder+Deck+Case+100%2B",
             "image": "/content/boulder.png",
             "isUnlimited": true
         },
@@ -28,7 +28,7 @@
             "name": "Gamegenic Sidekick 100+ XL",
             "description": "Декбокс для едх",
             "isBooked": false,
-            "link": "https://dragonshop.com.ua/ru/catalog/search/?q=Sidekick+100%2B+XL+Green",
+            "link": "https://dragonshop.com.ua/catalog/search/?q=Sidekick+100%2B+XL+Green",
             "image": "/content/sidekick.png",
             "isUnlimited": true
         },
@@ -36,9 +36,17 @@
             "name": "Dragon Shield Matte Dual Sleeves Fury",
             "description": "ВАЖЛИВО: саме червоні Fury",
             "isBooked": false,
-            "link": "https://dragonshop.com.ua/ru/copy_protektory-dlia-kart-dragon-shield-matte-dual-sleeves-fury-100-sht/",
+            "link": "https://domigr.com.ua/aksessuary-cat/protektory-1/sleeves-dragon-shield/dragon-shield-dual-matte-sleeves-fury-protektory-100sht.php",
             "image": "/content/shields.png",
             "isUnlimited": true
+        },
+        "Civilization VII": {
+            "name": "Civilization VII",
+            "description": "Шишка на циву стоїть",
+            "isBooked": false,
+            "link": "https://store.steampowered.com/app/1295660/Sid_Meiers_Civilization_VII/",
+            "image": "/content/civ.png",
+            "isUnlimited": false
         }
     },
     "nedovolnaya": {}
