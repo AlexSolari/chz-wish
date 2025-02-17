@@ -47,6 +47,14 @@
             "link": "https://store.steampowered.com/app/1295660/Sid_Meiers_Civilization_VII/",
             "image": "/content/civ.png",
             "isUnlimited": false
+        },
+        "STALKER 2": {
+            "name": "STALKER 2",
+            "description": "Якось руки не доходять самому купити",
+            "isBooked": false,
+            "link": "https://store.steampowered.com/app/1643320/STALKER_2_Heart_of_Chornobyl/",
+            "image": "/content/stalker.png",
+            "isUnlimited": false
         }
     },
     "nedovolnaya": {}
