@@ -21,7 +21,7 @@
 </script>
 
 <div
-    class="flex flex-col items-center justify-center py-8 px-4 sm:px-6 lg:px-8"
+    class="flex flex-col items-center justify-center py-6 px-4 sm:px-6 lg:px-8"
 >
     <h1 class="text-2xl font-semibold mb-6 font-mono header">
         <a href="/">./wishlist/</a>

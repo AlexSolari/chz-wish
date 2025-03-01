@@ -16,7 +16,7 @@
 </script>
 
 <div
-    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full max-w-6xl"
+    class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full max-w-6xl"
 >
     {#each data.viewModels as cardItem}
         <Card item={cardItem} />
