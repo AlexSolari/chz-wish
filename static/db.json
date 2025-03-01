@@ -55,6 +55,14 @@
             "link": "https://store.steampowered.com/app/1643320/STALKER_2_Heart_of_Chornobyl/",
             "image": "/content/stalker.png",
             "isUnlimited": false
+        },
+        "WarCraft 3": {
+            "name": "WarCraft 3",
+            "description": "Хоч рефордж і хуйня, але ліцуху хочу мати<br>Батлтаг: Cheese#2625",
+            "isBooked": false,
+            "link": "https://us.shop.battle.net/en-us/product/warcraft-3-reforged#optLogin=true",
+            "image": "/content/wc3.png",
+            "isUnlimited": false
         }
     },
     "nedovolnaya": {}
