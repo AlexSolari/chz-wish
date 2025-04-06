@@ -38,6 +38,10 @@ export class CardData implements ICardData {
         this.isBooked = data.isBooked;
         this.isUnlimited = data.isUnlimited;
     }
+
+    toJSON() {
+        return { ...this };
+    }
 }
 
 export interface IBookingStatusChangeRequestData {
