@@ -1,53 +1,59 @@
 {
-    "chz": {
-        "Cash": {
-            "name": "Cash",
-            "description": "Гроші = кайф",
-            "isBooked": false,
-            "secret": null,
-            "image": "/content/money.jpg",
-            "isUnlimited": true
-        },
-        "Смачний алкоголь": {
-            "name": "Смачний алкоголь",
-            "description": "Бажано джин/ром/егерь.",
-            "isBooked": false,
-            "secret": null,
-            "image": "/content/drinks.png",
-            "isUnlimited": true
-        },
-        "Ultimate Guard Boulder Deck Case 100+": {
-            "name": "Ultimate Guard Boulder Deck Case 100+",
-            "description": "Декбокс для 60-карткових форматів",
-            "isBooked": false,
-            "link": "https://dragonshop.com.ua/catalog/search/?q=Ultimate+Guard+Boulder+Deck+Case+100%2B",
-            "image": "/content/boulder.png",
-            "isUnlimited": true
-        },
-        "Gamegenic Sidekick 100+ XL": {
-            "name": "Gamegenic Sidekick 100+ XL",
-            "description": "Декбокс для едх",
-            "isBooked": false,
-            "link": "https://dragonshop.com.ua/catalog/search/?q=Sidekick+100%2B+XL+Green",
-            "image": "/content/sidekick.png",
-            "isUnlimited": true
-        },
-        "Dragon Shield Matte Dual Sleeves Fury": {
-            "name": "Dragon Shield Matte Dual Sleeves Fury",
-            "description": "ВАЖЛИВО: саме червоні Fury",
-            "isBooked": false,
-            "link": "https://domigr.com.ua/aksessuary-cat/protektory-1/sleeves-dragon-shield/dragon-shield-dual-matte-sleeves-fury-protektory-100sht.php",
-            "image": "/content/shields.png",
-            "isUnlimited": true
-        },
-        "STALKER 2": {
-            "name": "STALKER 2",
-            "description": "Якось руки не доходять самому купити",
-            "isBooked": false,
-            "link": "https://store.steampowered.com/app/1643320/STALKER_2_Heart_of_Chornobyl/",
-            "image": "/content/stalker.png",
-            "isUnlimited": false
-        }
-    },
-    "nedovolnaya": {}
+  "Cash": {
+    "name": "Cash",
+    "description": "Гроші = кайф",
+    "isBooked": false,
+    "secret": null,
+    "image": "/content/money.jpg",
+    "isUnlimited": true
+  },
+  "Смачний алкоголь": {
+    "name": "Смачний алкоголь",
+    "description": "Бажано джин/ром/егерь.",
+    "isBooked": false,
+    "secret": null,
+    "image": "/content/drinks.png",
+    "isUnlimited": true
+  },
+  "Ultimate Guard Boulder Deck Case 100+": {
+    "name": "Ultimate Guard Boulder Deck Case 100+",
+    "description": "Декбокс для 60-карткових форматів",
+    "isBooked": false,
+    "link": "https://dragonshop.com.ua/catalog/search/?q=Ultimate+Guard+Boulder+Deck+Case+100%2B",
+    "image": "/content/boulder.png",
+    "isUnlimited": true
+  },
+  "Gamegenic Sidekick 100+ XL": {
+    "name": "Gamegenic Sidekick 100+ XL",
+    "description": "Декбокс для едх",
+    "isBooked": false,
+    "link": "https://dragonshop.com.ua/catalog/search/?q=Sidekick+100%2B+XL+Green",
+    "image": "/content/sidekick.png",
+    "isUnlimited": true
+  },
+  "Dragon Shield Matte Dual Sleeves Fury": {
+    "name": "Dragon Shield Matte Dual Sleeves Fury",
+    "description": "ВАЖЛИВО: саме червоні Fury",
+    "isBooked": false,
+    "link": "https://domigr.com.ua/aksessuary-cat/protektory-1/sleeves-dragon-shield/dragon-shield-dual-matte-sleeves-fury-protektory-100sht.php",
+    "image": "/content/shields.png",
+    "isUnlimited": true
+  },
+  "STALKER 2": {
+    "name": "STALKER 2",
+    "description": "Якось руки не доходять самому купити",
+    "isBooked": false,
+    "link": "https://store.steampowered.com/app/1643320/STALKER_2_Heart_of_Chornobyl/",
+    "image": "/content/stalker.png",
+    "isUnlimited": false
+  },
+  "AKAI MPK MINI MK3 Black": {
+    "name": "AKAI MPK MINI MK3 Black",
+    "description": "Може з новим контроллером буду випускати музику трохи частіше",
+    "isBooked": false,
+    "link": "https://muztorg.ua/uk/klavishnie-instrumenti/midi-klaviaturi/akai_mpk_mini_mk3_black_midi_klaviatura_230876/",
+    "image": "/content/akai.png",
+    "isUnlimited": false,
+    "secret": null
+  }
 }
