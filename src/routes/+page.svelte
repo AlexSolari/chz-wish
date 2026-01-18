@@ -1,18 +1,12 @@
 <script lang="ts">
     import { invalidateAll } from '$app/navigation';
     import Card from '$lib/components/Card.svelte';
-    import { currentUser } from '$lib/stores.svelte.js';
     import type { ICardData } from '$lib/types';
     interface Props {
         data: { viewModels: ICardData[] };
     }
 
     let { data }: Props = $props();
-
-    $effect(() => {
-        document.cookie = `target=${currentUser.name}`;
-        invalidateAll();
-    });
 </script>
 
 <div

@@ -7,11 +7,6 @@ export interface ICardData {
     isUnlimited: boolean;
 }
 
-export enum User {
-    chz = 'chz',
-    nedovolnaya = 'nedovolnaya'
-}
-
 export interface IWishlistItem {
     name: string;
     description: string;
@@ -50,20 +45,11 @@ export interface IBookingStatusChangeRequestData {
 }
 
 export interface IPostRequestData<TType> {
-    user: User;
     data: TType;
 }
 
 export interface Database {
-    all(user: string): Promise<IWishlistItem[]>;
-    setBooked(
-        user: string,
-        itemName: string,
-        secret: string
-    ): Promise<IWishlistItem>;
-    setUnbooked(
-        user: string,
-        itemName: string,
-        secret: string
-    ): Promise<IWishlistItem>;
+    all(): Promise<IWishlistItem[]>;
+    setBooked(itemName: string, secret: string): Promise<IWishlistItem>;
+    setUnbooked(itemName: string, secret: string): Promise<IWishlistItem>;
 }

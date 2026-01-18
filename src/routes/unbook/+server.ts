@@ -10,7 +10,6 @@ export async function POST({ request }) {
     const requestBody =
         (await request.json()) as IPostRequestData<IBookingStatusChangeRequestData>;
     const response = await db.setUnbooked(
-        requestBody.user,
         requestBody.data.name,
         requestBody.data.secret
     );

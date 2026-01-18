@@ -1,8 +1,7 @@
 import { JSONFilePreset } from 'lowdb/node';
 import type { Database, IWishlistItem } from './types';
 
-type UserDataCollection = Record<string, IWishlistItem>;
-type DataCollection = Record<string, UserDataCollection>;
+type DataCollection = Record<string, IWishlistItem>;
 
 function connect() {
     return JSONFilePreset(
@@ -11,36 +10,36 @@ function connect() {
     );
 }
 
-async function all(user: string) {
+async function all() {
     const db = await connect();
 
     await db.read();
 
-    return Object.values(db.data[user] || []);
+    return Object.values(db.data || []);
 }
 
-async function setBooked(user: string, itemName: string, secret: string) {
+async function setBooked(itemName: string, secret: string) {
     const db = await connect();
 
     await db.update((data) => {
-        data[user][itemName].isBooked = true;
-        data[user][itemName].secret = secret;
+        data[itemName].isBooked = true;
+        data[itemName].secret = secret;
     });
 
-    return db.data[user][itemName];
+    return db.data[itemName];
 }
 
-async function setUnbooked(user: string, itemName: string, secret: string) {
+async function setUnbooked(itemName: string, secret: string) {
     const db = await connect();
 
-    if (db.data[user][itemName].secret == secret) {
+    if (db.data[itemName].secret == secret) {
         await db.update((data) => {
-            data[user][itemName].isBooked = false;
-            data[user][itemName].secret = null;
+            data[itemName].isBooked = false;
+            data[itemName].secret = null;
         });
     }
 
-    return db.data[user][itemName];
+    return db.data[itemName];
 }
 
 export default {
