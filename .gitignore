@@ -11,3 +11,5 @@ vite.config.ts.timestamp-*
 /static/out.css
 build.ps1
 pub.ps1
+bun.lock
+/.vscode

@@ -12,8 +12,8 @@
     class="flex flex-col items-center justify-center py-6 px-4 sm:px-6 lg:px-8"
 >
     <h1 class="text-2xl font-semibold mb-6 font-mono header">
-        <a href="/">./wishlist/</a>
-        <span class="text-gray-500 blink">chz</span>
+        ./chz/
+        <span class="text-gray-500 blink">wishlist</span>
     </h1>
     <div>{@render children()}</div>
 </div>

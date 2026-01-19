@@ -1,13 +1,12 @@
 import { JSONFilePreset } from 'lowdb/node';
-import type { Database, IWishlistItem } from './types';
+import type { Database, WishlistItem } from './types';
 
-type DataCollection = Record<string, IWishlistItem>;
+type DataCollection = Record<string, WishlistItem>;
+const dbFilePath =
+    import.meta.env.MODE == 'development' ? 'static/db.json' : `db.json`;
 
 function connect() {
-    return JSONFilePreset(
-        import.meta.env.MODE == 'development' ? 'static/db.json' : `db.json`,
-        {} as DataCollection
-    );
+    return JSONFilePreset<DataCollection>(dbFilePath, {});
 }
 
 async function all() {

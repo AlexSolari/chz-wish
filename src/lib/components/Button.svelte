@@ -8,19 +8,22 @@
         children: Snippet;
     }
 
-    let {
+    const {
         active = true,
         handler = () => {},
         userClass = '',
         children
     }: Props = $props();
 
-    let additionalClasses = !active
-        ? 'border border-gray-400 text-gray-800'
-        : 'text-gray-500';
+    const additionalClasses = $derived(
+        !active
+            ? 'border-gray-400 text-gray-800'
+            : 'border-gray-400 text-gray-500'
+    );
 </script>
 
 <button
     onclick={handler}
-    class="bg-white hover:bg-gray-100 font-semibold py-2 px-4 {additionalClasses} text-sm rounded shadow ml-2 relative {userClass}"
->{@render children()}</button>
+    class="bg-white hover:bg-gray-100 font-semibold py-2 px-4 border {additionalClasses} text-sm rounded shadow ml-2 relative {userClass}"
+    >{@render children()}</button
+>

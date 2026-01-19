@@ -1,55 +1,17 @@
-export interface ICardData {
+export type WishlistItem = {
     name: string;
     description: string;
     image: string;
     link: string;
+    secret?: string | null;
     isBooked: boolean;
     isUnlimited: boolean;
-}
+};
 
-export interface IWishlistItem {
-    name: string;
-    description: string;
-    image: string;
-    link: string;
-    secret: string | null;
-    isBooked: boolean;
-    isUnlimited: boolean;
-}
-
-export class CardData implements ICardData {
-    name: string;
-    description: string;
-    image: string;
-    link: string;
-    isBooked: boolean;
-    isUnlimited: boolean;
-
-    constructor(data: IWishlistItem) {
-        this.name = data.name;
-        this.description = data.description;
-        this.image = data.image;
-        this.link = data.link || '';
-        this.isBooked = data.isBooked;
-        this.isUnlimited = data.isUnlimited;
-    }
-
-    toJSON() {
-        return { ...this };
-    }
-}
-
-export interface IBookingStatusChangeRequestData {
-    secret: string;
-    name: string;
-}
-
-export interface IPostRequestData<TType> {
-    data: TType;
-}
+export type CardData = Omit<WishlistItem, 'secret'>;
 
 export interface Database {
-    all(): Promise<IWishlistItem[]>;
-    setBooked(itemName: string, secret: string): Promise<IWishlistItem>;
-    setUnbooked(itemName: string, secret: string): Promise<IWishlistItem>;
+    all(): Promise<WishlistItem[]>;
+    setBooked(itemName: string, secret: string): Promise<WishlistItem>;
+    setUnbooked(itemName: string, secret: string): Promise<WishlistItem>;
 }

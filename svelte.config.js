@@ -3,10 +3,22 @@ import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	kit: {
-		adapter: adapter()
-	},
-	preprocess: vitePreprocess()
+    compilerOptions: {
+        experimental: {
+            async: true
+        }
+    },
+    kit: {
+        csrf: {
+            trustedOrigins: ['*'],
+            checkOrigin: false
+        },
+        experimental: {
+            remoteFunctions: true
+        },
+        adapter: adapter()
+    },
+    preprocess: vitePreprocess()
 };
 
 export default config;

@@ -1,10 +1,10 @@
 <script lang="ts">
-    import type { ICardData } from '$lib/types';
+    import type { CardData } from '$lib/types';
     import Button from './Button.svelte';
-    import { post } from '$lib';
+    import { book, unbook } from '$lib/remote/data.remote';
 
     interface Props {
-        item: ICardData;
+        item: CardData;
     }
 
     let { item }: Props = $props();
@@ -15,9 +15,7 @@
         );
 
         if (secret) {
-            const response = await post('/book', { name: item.name, secret });
-
-            item = await response.json();
+            item = await book({ name: item.name, secret });
         }
     }
 
@@ -25,20 +23,20 @@
         const secret = prompt('Введіть пароль:');
 
         if (secret) {
-            const response = await post('/unbook', { name: item.name, secret });
-
-            item = await response.json();
+            item = await unbook({ name: item.name, secret });
         }
     }
-    let bookedText = $derived(item.isBooked ? 'Заброньовано' : 'Доступно');
-    let buttonText = $derived(item.isBooked ? 'Прибрати бронь' : 'Забронювати');
-    let bookedClass = $derived(
+    const bookedText = $derived(item.isBooked ? 'Заброньовано' : 'Доступно');
+    const buttonText = $derived(
+        item.isBooked ? 'Прибрати бронь' : 'Забронювати'
+    );
+    const bookedClass = $derived(
         item.isBooked ? 'text-red-600' : 'text-green-600'
     );
-    let actionClass = $derived(
+    const actionClass = $derived(
         item.isBooked ? 'opacity-50 hover:opacity 100' : ''
     );
-    let actionHandler = $derived(
+    const actionHandler = $derived(
         item.isBooked ? handleUnbooking : handleBooking
     );
 </script>
