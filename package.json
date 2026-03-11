@@ -5,7 +5,7 @@
     "scripts": {
         "dev": "vite dev",
         "build": "vite build",
-        "postbuild": "node -e \"require('fs').copyFileSync('./static/db.json','./public/db.json')\"",
+        "postbuild": "node -e \"import('node:fs').then(({cpSync})=>cpSync('static','public',{recursive:true}))\"",
         "preview": "vite preview",
         "check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
         "check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch",
