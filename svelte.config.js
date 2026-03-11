@@ -16,9 +16,7 @@ const config = {
         experimental: {
             remoteFunctions: true
         },
-        adapter: adapter({
-            out: 'public'
-        })
+        adapter: adapter()
     },
     preprocess: vitePreprocess()
 };
