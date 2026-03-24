@@ -1,6 +1,7 @@
 <script lang="ts">
     import type { CardData } from '$lib/types';
     import Button from './Button.svelte';
+    import { base } from "$app/paths";
     import { book, unbook } from '$lib/remote/data.remote';
 
     interface Props {
@@ -46,7 +47,7 @@
     data-v0-t="card"
 >
     <img
-        src={item.image}
+        src={base + item.image}
         alt={item.name}
         width="500"
         height="400"

@@ -16,7 +16,11 @@ const config = {
         experimental: {
             remoteFunctions: true
         },
-        adapter: adapter()
+        adapter: adapter(),
+        paths: {
+            base: '/wishlist',
+            relative: false
+        }
     },
     preprocess: vitePreprocess()
 };

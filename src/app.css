@@ -1,22 +1,23 @@
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @keyframes cursor-blink {
     0% {
-      opacity: 0.5;
+        opacity: 0.5;
     }
-  }
-  
-  .header .blink{
+}
+
+.header .blink {
     appearance: none;
     -moz-appearance: none;
     -webkit-appearance: none;
     margin-left: -15px;
     animation: cursor-blink 2s steps(2) infinite;
-  }
+}
 
-  .embedded-link{
+.embedded-link {
     font-weight: 600;
     text-decoration: underline;
     color: #334155;
-  }
+}
