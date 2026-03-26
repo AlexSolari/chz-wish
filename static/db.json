@@ -40,6 +40,14 @@
         "isUnlimited": true,
         "secret": null
     },
+    "Фойл Шокленди": {
+        "name": "Фойл Шокленди",
+        "description": "Фойл шоки з <a class='text-sm text-gray-600 underline' href='https://scryfall.com/search?q=%2B%2B+is%3Ashockland+-is%3Afullart+-is%3Aextended+-is%3Aborderless&unique=cards&as=grid&order=name'>звичайним/ретро бордером</a>",
+        "isBooked": false,
+        "image": "/content/shocklands.png",
+        "isUnlimited": true,
+        "secret": null
+    },
     "STALKER 2": {
         "name": "STALKER 2",
         "description": "Якось руки не доходять самому купити",
@@ -63,6 +71,15 @@
         "isBooked": false,
         "link": "https://dnipro-m.ua/tovar/akkumulyatornaya-otvertka-csd-36x/",
         "image": "/content/dniprom.png",
+        "isUnlimited": false,
+        "secret": null
+    },
+    "Геймпад": {
+        "name": "Геймпад",
+        "description": "Я не шарю які зараз нормальні, тому вибирайте самі",
+        "isBooked": false,
+        "link": null,
+        "image": "/content/gamepad.png",
         "isUnlimited": false,
         "secret": null
     }
