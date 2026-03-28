@@ -42,7 +42,7 @@
     },
     "Фойл Шокленди": {
         "name": "Фойл Шокленди",
-        "description": "Фойл шоки з <a class='text-sm text-gray-600 underline' href='https://scryfall.com/search?q=%2B%2B+is%3Ashockland+-is%3Afullart+-is%3Aextended+-is%3Aborderless&unique=cards&as=grid&order=name'>звичайним/ретро бордером</a>",
+        "description": "Фойл шоки з <a class='text-sm text-gray-600 underline' target='_blank' href='https://scryfall.com/search?q=%2B%2B+is%3Ashockland+-is%3Afullart+-is%3Aextended+-is%3Aborderless&unique=cards&as=grid&order=name'>звичайним/ретро бордером</a>",
         "isBooked": false,
         "image": "/content/shocklands.png",
         "isUnlimited": true,
@@ -80,6 +80,24 @@
         "isBooked": false,
         "link": null,
         "image": "/content/gamepad.png",
+        "isUnlimited": false,
+        "secret": null
+    },
+    "Thrustmaster T.16000M FCS PC": {
+        "name": "Thrustmaster T.16000M FCS PC",
+        "description": "Шоб в елітку шпілить з кайфом",
+        "isBooked": false,
+        "link": "https://rozetka.com.ua/ua/thrustmaster-2960773/p422983881/",
+        "image": "/content/thrustmaster.png",
+        "isUnlimited": false,
+        "secret": null
+    },
+    "Проектор RZTK 4K Cinema": {
+        "name": "Проектор RZTK 4K Cinema",
+        "description": "Буду проектіровать....",
+        "isBooked": false,
+        "link": "https://rozetka.com.ua/ua/rztk-pc4k/p462076929/",
+        "image": "/content/projector.png",
         "isUnlimited": false,
         "secret": null
     }
