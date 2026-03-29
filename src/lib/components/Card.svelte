@@ -1,7 +1,7 @@
 <script lang="ts">
     import type { CardData } from '$lib/types';
     import Button from './Button.svelte';
-    import { base } from "$app/paths";
+    import { base } from '$app/paths';
     import { book, unbook } from '$lib/remote/data.remote';
 
     interface Props {
@@ -67,7 +67,7 @@
                     <a
                         target="_blank"
                         rel="noopener noreferrer"
-                        href={item.link}>Купити тут</a
+                        href={item.link}>{item.linkTitle ?? 'Купити тут'}</a
                     >
                 </p>
             </div>
@@ -75,9 +75,11 @@
 
         <div class="m-2 flex items-center min-h-9">
             {#if item.isUnlimited}
-                <span class="ml-2 mb-1 text-sm text-gray-500"
-                    >Це можна дарувати в любому обсязі</span
-                >
+                {#if !item.hideUnlimitedText}
+                    <span class="ml-2 mb-1 text-sm text-gray-500"
+                        >Це можна дарувати в любому обсязі</span
+                    >
+                {/if}
             {:else}
                 <div class="flex flex-1 self-end relative bottom-2">
                     <svg

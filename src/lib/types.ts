@@ -6,6 +6,8 @@ export type WishlistItem = {
     secret?: string | null;
     isBooked: boolean;
     isUnlimited: boolean;
+    linkTitle?: string;
+    hideUnlimitedText?: boolean;
 };
 
 export type CardData = Omit<WishlistItem, 'secret'>;

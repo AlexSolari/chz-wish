@@ -1,11 +1,14 @@
 {
-    "Cash": {
-        "name": "Cash",
-        "description": "Гроші = кайф",
+    "Закинуть гроші на банку": {
+        "name": "Закинуть гроші на банку",
+        "description": "Якшо нічого не вибрали то можно просто закинуть на банку",
         "isBooked": false,
         "secret": null,
-        "image": "/content/money.jpg",
-        "isUnlimited": true
+        "link": "https://send.monobank.ua/jar/4Lu1E47Hzj",
+        "image": "/content/banka.png",
+        "isUnlimited": true,
+        "linkTitle": "Монобанка",
+        "hideUnlimitedText": true
     },
     "Смачний алкоголь": {
         "name": "Смачний алкоголь",
