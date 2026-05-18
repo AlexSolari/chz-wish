@@ -51,32 +51,6 @@
         "isUnlimited": true,
         "secret": null
     },
-    "STALKER 2": {
-        "name": "STALKER 2",
-        "description": "Якось руки не доходять самому купити",
-        "isBooked": false,
-        "link": "https://store.steampowered.com/app/1643320/STALKER_2_Heart_of_Chornobyl/",
-        "image": "/content/stalker.png",
-        "isUnlimited": false
-    },
-    "AKAI MPK MINI MK3 Black": {
-        "name": "AKAI MPK MINI MK3 Black",
-        "description": "Може з новим контроллером буду випускати музику трохи частіше",
-        "isBooked": false,
-        "link": "https://prodj.ua/midi-keyboard/akai-mpk-mini-mk3",
-        "image": "/content/akai.png",
-        "isUnlimited": false,
-        "secret": null
-    },
-    "Dnipro-M CSD-36X": {
-        "name": "Dnipro-M CSD-36X",
-        "description": "Шось заебався мануально крутить",
-        "isBooked": false,
-        "link": "https://dnipro-m.ua/tovar/akkumulyatornaya-otvertka-csd-36x/",
-        "image": "/content/dniprom.png",
-        "isUnlimited": false,
-        "secret": null
-    },
     "Геймпад": {
         "name": "Геймпад",
         "description": "Я не шарю які зараз нормальні, тому вибирайте самі",
@@ -92,15 +66,6 @@
         "isBooked": false,
         "link": "https://rozetka.com.ua/ua/thrustmaster-2960773/p422983881/",
         "image": "/content/thrustmaster.png",
-        "isUnlimited": false,
-        "secret": null
-    },
-    "Проектор RZTK 4K Cinema": {
-        "name": "Проектор RZTK 4K Cinema",
-        "description": "Буду проектіровать....",
-        "isBooked": false,
-        "link": "https://rozetka.com.ua/ua/rztk-pc4k/p462076929/",
-        "image": "/content/projector.png",
         "isUnlimited": false,
         "secret": null
     }
